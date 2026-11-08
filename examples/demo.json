@@ -1,0 +1,814 @@
+{
+  "schema_version": 1,
+  "entity": "Illustrative Company — synthetic data",
+  "period": "2026-12-31 (illustrative fiscal year)",
+  "currency": "USD",
+  "facts": [
+    {
+      "key": "BS.cash",
+      "value": "100",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B2",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.restricted_cash_current",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B3",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.restricted_cash_noncurrent",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B4",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.accounts_receivable",
+      "value": "200",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B5",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.inventory",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B6",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.other_current_assets",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B7",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.current_assets",
+      "value": "300",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B8",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.ppe_net",
+      "value": "300",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B9",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.intangibles_net",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B10",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.goodwill",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B11",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.other_noncurrent_assets",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B12",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.total_assets",
+      "value": "600",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B13",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.accounts_payable",
+      "value": "150",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B14",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.accrued_expenses",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B15",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.debt_current",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B16",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.lease_liabilities_current",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B17",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.other_current_liabilities",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B18",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.current_liabilities",
+      "value": "150",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B19",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.debt_noncurrent",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B20",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.lease_liabilities_noncurrent",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B21",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.other_noncurrent_liabilities",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B22",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.total_liabilities",
+      "value": "150",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B23",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.share_capital",
+      "value": "200",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B24",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.retained_earnings",
+      "value": "250",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B25",
+      "basis": "consolidated"
+    },
+    {
+      "key": "BS.total_equity",
+      "value": "450",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B26",
+      "basis": "consolidated"
+    },
+    {
+      "key": "PY.BS.cash",
+      "value": "80",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B27",
+      "basis": "consolidated"
+    },
+    {
+      "key": "PY.BS.restricted_cash_current",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B28",
+      "basis": "consolidated"
+    },
+    {
+      "key": "PY.BS.restricted_cash_noncurrent",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B29",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.revenue",
+      "value": "500",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B30",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.cost_of_revenue",
+      "value": "300",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B31",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.gross_profit",
+      "value": "200",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B32",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.operating_expenses",
+      "value": "120",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B33",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.operating_income",
+      "value": "80",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B34",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.nonoperating_net",
+      "value": "-10",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B35",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.pretax_income",
+      "value": "70",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B36",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.income_tax_expense",
+      "value": "20",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B37",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.net_income",
+      "value": "50",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B38",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.other_comprehensive_income",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B39",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.comprehensive_income",
+      "value": "50",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B40",
+      "basis": "consolidated"
+    },
+    {
+      "key": "IS.depreciation_amortization",
+      "value": "30",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B41",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.beginning_cash",
+      "value": "80",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B42",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.ending_cash",
+      "value": "100",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B43",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.net_change",
+      "value": "20",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B44",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.net_income",
+      "value": "50",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B45",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.depreciation_amortization",
+      "value": "30",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B46",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.share_based_compensation",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B47",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.operating",
+      "value": "50",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B48",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.investing",
+      "value": "-20",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B49",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.financing",
+      "value": "-10",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B50",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SCF.exchange_effect",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B51",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.opening_total",
+      "value": "410",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B52",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.net_income",
+      "value": "50",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B53",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.other_comprehensive_income",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B54",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.capital_issued",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B55",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.share_based_compensation",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B56",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.dividends",
+      "value": "10",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B57",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.other_movements",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B58",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.closing_total",
+      "value": "450",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B59",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.closing_share_capital",
+      "value": "200",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B60",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.closing_retained_earnings",
+      "value": "250",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B61",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.closing_aoci",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B62",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.closing_nci",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B63",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.opening_retained_earnings",
+      "value": "210",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B64",
+      "basis": "consolidated"
+    },
+    {
+      "key": "SOE.other_retained_earnings_movements",
+      "value": "0",
+      "unit": "1000",
+      "source": "Illustrative financial statements (synthetic)",
+      "location": "DemoFacts!B65",
+      "basis": "consolidated"
+    }
+  ],
+  "tb": [
+    {
+      "account": "1000",
+      "name": "Cash and cash equivalents",
+      "balance": "100000",
+      "source": "Illustrative closing TB (synthetic)",
+      "location": "DemoTB!C2"
+    },
+    {
+      "account": "1100",
+      "name": "Accounts receivable",
+      "balance": "200000",
+      "source": "Illustrative closing TB (synthetic)",
+      "location": "DemoTB!C3"
+    },
+    {
+      "account": "1500",
+      "name": "Property, plant and equipment, net",
+      "balance": "300000",
+      "source": "Illustrative closing TB (synthetic)",
+      "location": "DemoTB!C4"
+    },
+    {
+      "account": "2000",
+      "name": "Accounts payable",
+      "balance": "-150000",
+      "source": "Illustrative closing TB (synthetic)",
+      "location": "DemoTB!C5"
+    },
+    {
+      "account": "3000",
+      "name": "Share capital",
+      "balance": "-200000",
+      "source": "Illustrative closing TB (synthetic)",
+      "location": "DemoTB!C6"
+    },
+    {
+      "account": "3100",
+      "name": "Retained earnings",
+      "balance": "-250000",
+      "source": "Illustrative closing TB (synthetic)",
+      "location": "DemoTB!C7"
+    }
+  ],
+  "mapping": [
+    {
+      "account": "1000",
+      "fsli": "BS.cash",
+      "sign": 1,
+      "confirmed": true,
+      "reviewer": "Demo reviewer",
+      "reason": "Illustrative mapping confirmed against the synthetic closing TB; debit positive, credit negative."
+    },
+    {
+      "account": "1100",
+      "fsli": "BS.accounts_receivable",
+      "sign": 1,
+      "confirmed": true,
+      "reviewer": "Demo reviewer",
+      "reason": "Illustrative mapping confirmed against the synthetic closing TB; debit positive, credit negative."
+    },
+    {
+      "account": "1500",
+      "fsli": "BS.ppe_net",
+      "sign": 1,
+      "confirmed": true,
+      "reviewer": "Demo reviewer",
+      "reason": "Illustrative mapping confirmed against the synthetic closing TB; debit positive, credit negative."
+    },
+    {
+      "account": "2000",
+      "fsli": "BS.accounts_payable",
+      "sign": -1,
+      "confirmed": true,
+      "reviewer": "Demo reviewer",
+      "reason": "Illustrative mapping confirmed against the synthetic closing TB; debit positive, credit negative."
+    },
+    {
+      "account": "3000",
+      "fsli": "BS.share_capital",
+      "sign": -1,
+      "confirmed": true,
+      "reviewer": "Demo reviewer",
+      "reason": "Illustrative mapping confirmed against the synthetic closing TB; debit positive, credit negative."
+    },
+    {
+      "account": "3100",
+      "fsli": "BS.retained_earnings",
+      "sign": -1,
+      "confirmed": true,
+      "reviewer": "Demo reviewer",
+      "reason": "Illustrative mapping confirmed against the synthetic closing TB; debit positive, credit negative."
+    }
+  ],
+  "demo_settings": {
+    "tolerance": "10000",
+    "overrides": {
+      "FS-01": "0"
+    },
+    "reviewer": "Demo reviewer",
+    "reason": "Illustrative settings only: demonstrate a USD 15,000 PPE note difference against USD 10,000 tolerance, with cash held to zero. D&A scope remains unconfirmed; SBC comparison is not applicable.",
+    "conditions": {
+      "scf_indirect_method": true,
+      "equity_income_scope_matches": true,
+      "da_scope_matches": null,
+      "sbc_scope_matches": false,
+      "ppe_gross_net_components_confirmed": true
+    },
+    "not_applicable": {},
+    "note_overrides": {}
+  },
+  "notes": [
+    {
+      "id": "Note 3",
+      "title": "Property, plant and equipment",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "ppe-gross",
+          "label": "Gross carrying amount",
+          "value": "400",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 3!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        },
+        {
+          "id": "ppe-depr",
+          "label": "Accumulated depreciation",
+          "value": "115",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 3!B3",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        },
+        {
+          "id": "ppe-net",
+          "label": "Property, plant and equipment, net",
+          "value": "285",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 3!B4",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    },
+    {
+      "id": "Note 4",
+      "title": "Intangible assets",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "intangibles-net",
+          "label": "Intangible assets, net",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 4!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    },
+    {
+      "id": "Note 5",
+      "title": "Goodwill",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "goodwill-ending",
+          "label": "Goodwill, ending balance",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 5!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    },
+    {
+      "id": "Note 6",
+      "title": "Accrued expenses and other current liabilities",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "accrued-total",
+          "label": "Total accrued expenses",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 6!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    },
+    {
+      "id": "Note 8",
+      "title": "Borrowings and debt",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "debt-current",
+          "label": "Current borrowings",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 8!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        },
+        {
+          "id": "debt-noncurrent",
+          "label": "Noncurrent borrowings",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 8!B3",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    },
+    {
+      "id": "Note 11",
+      "title": "Income taxes",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "tax-expense",
+          "label": "Income tax expense",
+          "value": "20",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 11!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        },
+        {
+          "id": "pretax-income",
+          "label": "Income before income taxes",
+          "value": "70",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 11!B3",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    },
+    {
+      "id": "Note 15",
+      "title": "Leases",
+      "text": "Synthetic illustrative note table. Amounts are in thousands of USD.",
+      "rows": [
+        {
+          "id": "lease-current",
+          "label": "Current lease liabilities",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 15!B2",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        },
+        {
+          "id": "lease-noncurrent",
+          "label": "Noncurrent lease liabilities",
+          "value": "0",
+          "unit": "1000",
+          "source": "Illustrative note tables (synthetic)",
+          "location": "Note 15!B3",
+          "period": "2026-12-31 (illustrative fiscal year)",
+          "currency": "USD",
+          "basis": "consolidated"
+        }
+      ]
+    }
+  ]
+}
