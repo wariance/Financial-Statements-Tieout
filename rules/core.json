@@ -1,0 +1,810 @@
+[
+  {
+    "id": "FS-01",
+    "name": "Ending cash including restricted cash",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "BS.cash",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.restricted_cash_current",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.restricted_cash_noncurrent",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.ending_cash",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare the configured balance-sheet cash components, including restricted cash, with the same consolidated closing cash scope in the cash-flow statement. Restricted balances must be explicit, including zero."
+  },
+  {
+    "id": "FS-02",
+    "name": "Beginning cash to prior-period balances",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "PY.BS.cash",
+        "coefficient": "1"
+      },
+      {
+        "key": "PY.BS.restricted_cash_current",
+        "coefficient": "1"
+      },
+      {
+        "key": "PY.BS.restricted_cash_noncurrent",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.beginning_cash",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Use finalized or explicitly restated prior-period balances on the same basis; never silently substitute current-period amounts."
+  },
+  {
+    "id": "FS-03",
+    "name": "Cash rollforward",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "SCF.beginning_cash",
+        "coefficient": "1"
+      },
+      {
+        "key": "SCF.net_change",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.ending_cash",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Beginning cash plus the signed change, including relevant exchange effects, equals ending cash for the configured cash scope."
+  },
+  {
+    "id": "FS-04",
+    "name": "Net income to cash-flow reconciliation",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "IS.net_income",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.net_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Applicable when the cash-flow reconciliation starts with the same net-income measure; confirm the indirect-method presentation.",
+    "condition": "scf_indirect_method"
+  },
+  {
+    "id": "FS-05",
+    "name": "Net income to equity movements",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "IS.net_income",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.net_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Confirm consolidated versus parent/NCI attribution and period alignment before comparing income with the equity movement.",
+    "condition": "equity_income_scope_matches"
+  },
+  {
+    "id": "FS-06",
+    "name": "Closing total equity",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "BS.total_equity",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.closing_total",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare the same equity scope, including noncontrolling interests where applicable; separate mezzanine classifications require adapted rules."
+  },
+  {
+    "id": "FS-07",
+    "name": "Closing share capital",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "BS.share_capital",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.closing_share_capital",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Share capital is an illustrative combined caption; configure the terms separately for additional equity classes."
+  },
+  {
+    "id": "FS-08",
+    "name": "Closing retained earnings",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "BS.retained_earnings",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.closing_retained_earnings",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare retained earnings or accumulated deficit using consistent signed balances."
+  },
+  {
+    "id": "FS-09",
+    "name": "Depreciation and amortization scope check",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "IS.depreciation_amortization",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.depreciation_amortization",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Only applicable after confirming the same expense scope, including amounts within cost of revenue, capitalization and other reconciliation differences.",
+    "condition": "da_scope_matches"
+  },
+  {
+    "id": "FS-10",
+    "name": "Share-based compensation scope check",
+    "category": "Cross-statement",
+    "lhs": [
+      {
+        "key": "SOE.share_based_compensation",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.share_based_compensation",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Only applicable after confirming equity classification, capitalization, timing and other scope differences. Zero operands alone do not establish applicability.",
+    "condition": "sbc_scope_matches"
+  },
+  {
+    "id": "M-01",
+    "name": "Current assets footing",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "BS.cash",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.restricted_cash_current",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.accounts_receivable",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.inventory",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.other_current_assets",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "BS.current_assets",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Sum configured disjoint current-asset components. Explicitly enter zero for absent template categories and adapt the component list to each engagement."
+  },
+  {
+    "id": "M-02",
+    "name": "Total assets footing",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "BS.current_assets",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.restricted_cash_noncurrent",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.ppe_net",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.intangibles_net",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.goodwill",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.other_noncurrent_assets",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "BS.total_assets",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Sum the configured current subtotal and disjoint noncurrent components, avoiding double counting restricted cash or other captions."
+  },
+  {
+    "id": "M-03",
+    "name": "Current liabilities footing",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "BS.accounts_payable",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.accrued_expenses",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.debt_current",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.lease_liabilities_current",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.other_current_liabilities",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "BS.current_liabilities",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Sum disjoint configured current liabilities; liabilities are presented as positive balances under this template."
+  },
+  {
+    "id": "M-04",
+    "name": "Total liabilities footing",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "BS.current_liabilities",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.debt_noncurrent",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.lease_liabilities_noncurrent",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.other_noncurrent_liabilities",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "BS.total_liabilities",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Sum configured current and noncurrent liability components without repeating subtotals."
+  },
+  {
+    "id": "M-05",
+    "name": "Accounting equation",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "BS.total_liabilities",
+        "coefficient": "1"
+      },
+      {
+        "key": "BS.total_equity",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "BS.total_assets",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Liabilities plus equity equal assets for this template. Add separately classified mezzanine interests or other presentation categories if applicable."
+  },
+  {
+    "id": "M-06",
+    "name": "Gross profit",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "IS.revenue",
+        "coefficient": "1"
+      },
+      {
+        "key": "IS.cost_of_revenue",
+        "coefficient": "-1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "IS.gross_profit",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Revenue less cost of revenue equals gross profit; costs are positive expense magnitudes in this template."
+  },
+  {
+    "id": "M-07",
+    "name": "Operating income",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "IS.gross_profit",
+        "coefficient": "1"
+      },
+      {
+        "key": "IS.operating_expenses",
+        "coefficient": "-1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "IS.operating_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Gross profit less positive operating expense magnitudes equals operating income."
+  },
+  {
+    "id": "M-08",
+    "name": "Pretax income",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "IS.operating_income",
+        "coefficient": "1"
+      },
+      {
+        "key": "IS.nonoperating_net",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "IS.pretax_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Operating income plus signed net nonoperating income or expense equals pretax income."
+  },
+  {
+    "id": "M-09",
+    "name": "Income after tax",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "IS.pretax_income",
+        "coefficient": "1"
+      },
+      {
+        "key": "IS.income_tax_expense",
+        "coefficient": "-1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "IS.net_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Pretax income less signed tax expense equals net income; a tax benefit is negative."
+  },
+  {
+    "id": "M-10",
+    "name": "Comprehensive income",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "IS.net_income",
+        "coefficient": "1"
+      },
+      {
+        "key": "IS.other_comprehensive_income",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "IS.comprehensive_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Use after-tax OCI on the same consolidated or attributable basis as the income figures."
+  },
+  {
+    "id": "M-11",
+    "name": "Cash-flow activities and exchange effects",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "SCF.operating",
+        "coefficient": "1"
+      },
+      {
+        "key": "SCF.investing",
+        "coefficient": "1"
+      },
+      {
+        "key": "SCF.financing",
+        "coefficient": "1"
+      },
+      {
+        "key": "SCF.exchange_effect",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SCF.net_change",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Add signed net operating, investing and financing cash flows plus the exchange effect. Configure extra reconciliation terms if required by the presentation."
+  },
+  {
+    "id": "M-12",
+    "name": "Total equity rollforward",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "SOE.opening_total",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.net_income",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.other_comprehensive_income",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.capital_issued",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.share_based_compensation",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.dividends",
+        "coefficient": "-1"
+      },
+      {
+        "key": "SOE.other_movements",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.closing_total",
+        "coefficient": "1"
+      }
+    ],
+    "description": "This template treats dividends as a positive distribution magnitude and all other movements as signed. Other movements must explicitly cover remaining transactions without duplicates."
+  },
+  {
+    "id": "M-13",
+    "name": "Equity components footing",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "SOE.closing_share_capital",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.closing_retained_earnings",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.closing_aoci",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.closing_nci",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.closing_total",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Sum the configured closing components. Adapt this list for treasury stock, APIC and additional share classes; no omitted component is assumed zero."
+  },
+  {
+    "id": "M-14",
+    "name": "Retained earnings rollforward",
+    "category": "Arithmetic",
+    "lhs": [
+      {
+        "key": "SOE.opening_retained_earnings",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.net_income",
+        "coefficient": "1"
+      },
+      {
+        "key": "SOE.dividends",
+        "coefficient": "-1"
+      },
+      {
+        "key": "SOE.other_retained_earnings_movements",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "SOE.closing_retained_earnings",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Use the income and dividends attributable to the retained-earnings scope. Adapt for NCI allocations, restatements and other changes; the illustrative fixture has no NCI.",
+    "condition": "equity_income_scope_matches"
+  },
+  {
+    "id": "N-01",
+    "name": "PPE net to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.ppe_net",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.ppe_net",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare net carrying amount, not gross cost. The sample intentionally contains a discrepancy."
+  },
+  {
+    "id": "N-02",
+    "name": "Intangible assets net to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.intangibles_net",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.intangibles_net",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare the same net carrying scope and date."
+  },
+  {
+    "id": "N-03",
+    "name": "Goodwill to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.goodwill",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.goodwill",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare the same reporting-entity and period scope."
+  },
+  {
+    "id": "N-04",
+    "name": "Accrued expenses to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.accrued_expenses",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.accrued_expenses",
+        "coefficient": "1"
+      }
+    ],
+    "description": "The note total must cover exactly the balance-sheet caption; adapt for combined captions."
+  },
+  {
+    "id": "N-05",
+    "name": "Current debt to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.debt_current",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.debt_current",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare current carrying amounts; principal, discounts and issuance costs may require an explicit bridge."
+  },
+  {
+    "id": "N-06",
+    "name": "Noncurrent debt to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.debt_noncurrent",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.debt_noncurrent",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare noncurrent carrying amounts, separately from current debt to expose classification differences."
+  },
+  {
+    "id": "N-07",
+    "name": "Tax expense to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "IS.income_tax_expense",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.income_tax_expense",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Use the income-statement tax expense scope, excluding tax assigned directly to OCI or equity."
+  },
+  {
+    "id": "N-08",
+    "name": "Pretax income to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "IS.pretax_income",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.pretax_income",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Use the same consolidated and continuing/discontinued-operations scope."
+  },
+  {
+    "id": "N-09",
+    "name": "Current lease liabilities to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.lease_liabilities_current",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.lease_liabilities_current",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare carrying amounts on the same lease-type scope, not undiscounted future payments."
+  },
+  {
+    "id": "N-10",
+    "name": "Noncurrent lease liabilities to note",
+    "category": "Notes",
+    "lhs": [
+      {
+        "key": "BS.lease_liabilities_noncurrent",
+        "coefficient": "1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.lease_liabilities_noncurrent",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Compare carrying amounts separately from current liabilities; adapt for separate finance and operating captions."
+  },
+  {
+    "id": "N-11",
+    "name": "PPE note gross-to-net footing",
+    "category": "Notes",
+    "condition": "ppe_gross_net_components_confirmed",
+    "lhs": [
+      {
+        "key": "NOTE.ppe_gross",
+        "coefficient": "1"
+      },
+      {
+        "key": "NOTE.ppe_accumulated_depreciation",
+        "coefficient": "-1"
+      }
+    ],
+    "rhs": [
+      {
+        "key": "NOTE.ppe_net",
+        "coefficient": "1"
+      }
+    ],
+    "description": "Gross cost less positive accumulated depreciation equals net PPE for this configured note; include impairment or other valuation accounts explicitly if needed."
+  }
+]

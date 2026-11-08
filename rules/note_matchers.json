@@ -1,0 +1,394 @@
+[
+  {
+    "key": "NOTE.ppe_net",
+    "fsli": "BS.ppe_net",
+    "topics": [
+      "property plant and equipment",
+      "property plant equipment",
+      "fixed assets",
+      "PPE",
+      "固定资产",
+      "固定資產",
+      "物业厂房及设备",
+      "物業廠房及設備"
+    ],
+    "labels": [
+      "property plant and equipment net",
+      "property plant equipment net",
+      "PPE net",
+      "net property plant and equipment",
+      "net book value",
+      "net carrying amount",
+      "net carrying value",
+      "net",
+      "固定资产净额",
+      "固定資產淨額",
+      "账面净值",
+      "賬面淨值",
+      "账面净额",
+      "固定资产账面价值"
+    ],
+    "exclude_labels": [
+      "gross",
+      "at cost",
+      "原值"
+    ]
+  },
+  {
+    "key": "NOTE.ppe_gross",
+    "fsli": "BS.ppe_net",
+    "topics": [
+      "property plant and equipment",
+      "property plant equipment",
+      "fixed assets",
+      "PPE",
+      "固定资产",
+      "固定資產",
+      "物业厂房及设备",
+      "物業廠房及設備"
+    ],
+    "labels": [
+      "property plant and equipment gross",
+      "gross property plant and equipment",
+      "PPE gross",
+      "gross carrying amount",
+      "gross carrying value",
+      "gross cost",
+      "cost",
+      "at cost",
+      "固定资产原值",
+      "固定資產原值",
+      "账面原值",
+      "賬面原值",
+      "原值"
+    ],
+    "exclude_labels": [
+      "net",
+      "accumulated",
+      "净",
+      "淨",
+      "累计",
+      "累計"
+    ]
+  },
+  {
+    "key": "NOTE.ppe_accumulated_depreciation",
+    "fsli": "BS.ppe_net",
+    "topics": [
+      "property plant and equipment",
+      "property plant equipment",
+      "fixed assets",
+      "PPE",
+      "固定资产",
+      "固定資產",
+      "物业厂房及设备",
+      "物業廠房及設備"
+    ],
+    "labels": [
+      "accumulated depreciation",
+      "total accumulated depreciation",
+      "累计折旧",
+      "累計折舊"
+    ],
+    "exclude_labels": [
+      "net",
+      "depreciation expense",
+      "净",
+      "淨",
+      "折旧费用",
+      "折舊費用"
+    ]
+  },
+  {
+    "key": "NOTE.intangibles_net",
+    "fsli": "BS.intangibles_net",
+    "topics": [
+      "intangible assets",
+      "intangibles",
+      "无形资产",
+      "無形資產"
+    ],
+    "labels": [
+      "intangible assets net",
+      "intangibles net",
+      "net intangible assets",
+      "net carrying amount",
+      "net book value",
+      "net",
+      "无形资产净额",
+      "無形資產淨額",
+      "账面净值",
+      "賬面淨值",
+      "无形资产账面价值"
+    ],
+    "exclude_labels": [
+      "gross",
+      "at cost",
+      "原值"
+    ]
+  },
+  {
+    "key": "NOTE.goodwill",
+    "fsli": "BS.goodwill",
+    "topics": [
+      "goodwill",
+      "商誉",
+      "商譽"
+    ],
+    "labels": [
+      "goodwill",
+      "goodwill ending balance",
+      "goodwill closing balance",
+      "ending balance",
+      "closing balance",
+      "goodwill net",
+      "商誉",
+      "商譽",
+      "商誉期末余额",
+      "商譽期末餘額",
+      "期末余额",
+      "期末餘額"
+    ],
+    "exclude_labels": [
+      "gross",
+      "opening",
+      "beginning",
+      "impairment",
+      "期初",
+      "减值",
+      "減值"
+    ]
+  },
+  {
+    "key": "NOTE.accrued_expenses",
+    "fsli": "BS.accrued_expenses",
+    "topics": [
+      "accrued expenses",
+      "accrued liabilities",
+      "应计费用",
+      "應計費用",
+      "应计负债",
+      "應計負債",
+      "应付费用"
+    ],
+    "labels": [
+      "total accrued expenses",
+      "accrued expenses",
+      "total accrued liabilities",
+      "accrued liabilities",
+      "应计费用合计",
+      "應計費用合計",
+      "应计费用",
+      "應計費用",
+      "应计负债合计",
+      "應計負債合計",
+      "应付费用合计"
+    ],
+    "exclude_labels": []
+  },
+  {
+    "key": "NOTE.debt_current",
+    "fsli": "BS.debt_current",
+    "topics": [
+      "debt",
+      "borrowings",
+      "loans",
+      "借款",
+      "债务",
+      "債務",
+      "贷款",
+      "貸款"
+    ],
+    "labels": [
+      "current debt",
+      "current borrowings",
+      "current loans",
+      "current portion",
+      "current portion of long term debt",
+      "short term borrowings",
+      "short term debt",
+      "current",
+      "流动部分",
+      "流動部分",
+      "短期借款",
+      "一年内到期的非流动负债",
+      "一年內到期的非流動負債"
+    ],
+    "exclude_labels": [
+      "noncurrent",
+      "non current",
+      "非流动部分",
+      "非流動部分"
+    ]
+  },
+  {
+    "key": "NOTE.debt_noncurrent",
+    "fsli": "BS.debt_noncurrent",
+    "topics": [
+      "debt",
+      "borrowings",
+      "loans",
+      "借款",
+      "债务",
+      "債務",
+      "贷款",
+      "貸款"
+    ],
+    "labels": [
+      "noncurrent debt",
+      "non current debt",
+      "noncurrent borrowings",
+      "non current borrowings",
+      "noncurrent loans",
+      "non current loans",
+      "noncurrent portion",
+      "non current portion",
+      "noncurrent",
+      "non current",
+      "long term debt net of current portion",
+      "long term borrowings excluding current portion",
+      "非流动部分",
+      "非流動部分",
+      "长期借款非流动部分",
+      "長期借款非流動部分",
+      "长期借款扣除一年内到期部分"
+    ],
+    "exclude_labels": [
+      "short term",
+      "短期"
+    ]
+  },
+  {
+    "key": "NOTE.income_tax_expense",
+    "fsli": "IS.income_tax_expense",
+    "topics": [
+      "income taxes",
+      "income tax",
+      "taxation",
+      "所得税",
+      "所得稅"
+    ],
+    "labels": [
+      "income tax expense",
+      "income tax benefit",
+      "income tax expense benefit",
+      "income tax provision",
+      "provision for income taxes",
+      "total income tax expense",
+      "total tax expense",
+      "所得税费用",
+      "所得稅費用",
+      "所得税费用合计",
+      "所得稅費用合計",
+      "所得税开支",
+      "所得稅開支"
+    ],
+    "exclude_labels": [
+      "deferred",
+      "current tax",
+      "递延",
+      "遞延",
+      "当期",
+      "當期"
+    ]
+  },
+  {
+    "key": "NOTE.pretax_income",
+    "fsli": "IS.pretax_income",
+    "topics": [
+      "income taxes",
+      "income tax",
+      "taxation",
+      "所得税",
+      "所得稅"
+    ],
+    "labels": [
+      "income before income taxes",
+      "income before taxes",
+      "income before tax",
+      "profit before tax",
+      "loss before tax",
+      "pretax income",
+      "pre tax income",
+      "pretax loss",
+      "税前利润",
+      "稅前利潤",
+      "所得税前利润",
+      "除税前溢利",
+      "除稅前溢利",
+      "税前亏损",
+      "稅前虧損"
+    ],
+    "exclude_labels": [
+      "domestic",
+      "foreign",
+      "境内",
+      "境外"
+    ]
+  },
+  {
+    "key": "NOTE.lease_liabilities_current",
+    "fsli": "BS.lease_liabilities_current",
+    "topics": [
+      "leases",
+      "lease liabilities",
+      "leasing",
+      "租赁",
+      "租賃"
+    ],
+    "labels": [
+      "current lease liabilities",
+      "lease liabilities current",
+      "current portion of lease liabilities",
+      "current portion",
+      "current",
+      "租赁负债流动部分",
+      "租賃負債流動部分",
+      "流动部分",
+      "流動部分",
+      "一年内到期的租赁负债",
+      "一年內到期的租賃負債"
+    ],
+    "exclude_labels": [
+      "noncurrent",
+      "non current",
+      "非流动部分",
+      "非流動部分",
+      "undiscounted",
+      "未折现",
+      "未折現"
+    ]
+  },
+  {
+    "key": "NOTE.lease_liabilities_noncurrent",
+    "fsli": "BS.lease_liabilities_noncurrent",
+    "topics": [
+      "leases",
+      "lease liabilities",
+      "leasing",
+      "租赁",
+      "租賃"
+    ],
+    "labels": [
+      "noncurrent lease liabilities",
+      "non current lease liabilities",
+      "lease liabilities noncurrent",
+      "lease liabilities non current",
+      "noncurrent portion of lease liabilities",
+      "non current portion of lease liabilities",
+      "noncurrent portion",
+      "non current portion",
+      "noncurrent",
+      "non current",
+      "租赁负债非流动部分",
+      "租賃負債非流動部分",
+      "非流动部分",
+      "非流動部分"
+    ],
+    "exclude_labels": [
+      "undiscounted",
+      "未折现",
+      "未折現"
+    ]
+  }
+]
